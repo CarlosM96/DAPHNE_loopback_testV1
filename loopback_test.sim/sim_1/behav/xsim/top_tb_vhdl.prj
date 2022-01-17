@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../Pruebas del LAb/CarlosPrueba/fullmode_Firmware/FM_UserExample-sGIT_master_rm-4.4_173_190220_09_34/src/crc.vhd" \
+
+# Do not sort compile order
+nosort
