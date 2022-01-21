@@ -139,11 +139,23 @@ set_property IOSTANDARD LVTTL [get_ports sfp_dis0]
 set_property  PACKAGE_PIN K8 [get_ports sfp_dis1]
 set_property IOSTANDARD LVTTL [get_ports sfp_dis1]
 
-#set_property  PACKAGE_PIN H6 [get_ports sfp_los0]
-#set_property IOSTANDARD LVTTL [get_ports sfp_los0]
+set_property  PACKAGE_PIN C4 [get_ports led0]
+set_property IOSTANDARD LVCMOS33 [get_ports led0]
 
-#set_property  PACKAGE_PIN K8 [get_ports sfp_los1]
-#set_property IOSTANDARD LVTTL [get_ports sfp_los1]
+set_property  PACKAGE_PIN B5 [get_ports led1]
+set_property IOSTANDARD LVCMOS33 [get_ports led1]
+
+set_property  PACKAGE_PIN A5 [get_ports led2]
+set_property IOSTANDARD LVCMOS33 [get_ports led2]
+
+set_property  PACKAGE_PIN B4 [get_ports led3]
+set_property IOSTANDARD LVCMOS33 [get_ports led3]
+
+set_property  PACKAGE_PIN A4 [get_ports led4]
+set_property IOSTANDARD LVCMOS33 [get_ports led4]
+
+set_property  PACKAGE_PIN D3 [get_ports led5]
+set_property IOSTANDARD LVCMOS33 [get_ports led5]
 ## we signal
 #set_property LOC XX [get_ports we]
 #set_property IOSTANDARD XX [get_ports we]

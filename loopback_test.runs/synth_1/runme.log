@@ -9,6 +9,7 @@
     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 
 source top.tcl -notrace
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2212.906 ; gain = 2.020 ; free physical = 556 ; free virtual = 4853
 Command: synth_design -top top -part xc7a200tfbg676-2
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
@@ -16,9 +17,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200
 INFO: [Device 21-403] Loading part xc7a200tfbg676-2
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 5089
+INFO: [Synth 8-7075] Helper process launched with PID 20050
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 2238.438 ; gain = 44.676 ; free physical = 733 ; free virtual = 7289
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 2222.812 ; gain = 9.801 ; free physical = 130 ; free virtual = 4091
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/sources_1/new/top.v:23]
 INFO: [Synth 8-6157] synthesizing module 'PRBS_DATA' [/home/daphnelme/Desktop/FMSC/FMSC_noCRC1/PRBS_DATA.v:3]
@@ -42,8 +43,8 @@ INFO: [Synth 8-6157] synthesizing module 'TX_RXex' [/home/daphnelme/Desktop/FMSC
 	Parameter EXAMPLE_SIM_GTRESET_SPEEDUP bound to: FALSE - type: string 
 	Parameter EXAMPLE_USE_CHIPSCOPE bound to: 0 - type: integer 
 	Parameter STABLE_CLOCK_PERIOD bound to: 10 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'TX_RX' [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.runs/synth_1/.Xil/Vivado-5032-daphne.linktest.lme/realtime/TX_RX_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'TX_RX' (5#1) [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.runs/synth_1/.Xil/Vivado-5032-daphne.linktest.lme/realtime/TX_RX_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'TX_RX' [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.runs/synth_1/.Xil/Vivado-19769-daphne.linktest.lme/realtime/TX_RX_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'TX_RX' (5#1) [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.runs/synth_1/.Xil/Vivado-19769-daphne.linktest.lme/realtime/TX_RX_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [/home/daphnelme/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:32992]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: FALSE - type: string 
@@ -56,26 +57,20 @@ INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (6#1) [/home/daphnelme/Xi
 INFO: [Synth 8-6157] synthesizing module 'BUFG' [/home/daphnelme/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:1083]
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (7#1) [/home/daphnelme/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:1083]
 INFO: [Synth 8-6155] done synthesizing module 'TX_RXex' (8#1) [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/sources_1/new/TX_RX.v:8]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/sources_1/new/top.v:121]
-INFO: [Synth 8-6157] synthesizing module 'ila_0' [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.runs/synth_1/.Xil/Vivado-5032-daphne.linktest.lme/realtime/ila_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ila_0' (9#1) [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.runs/synth_1/.Xil/Vivado-5032-daphne.linktest.lme/realtime/ila_0_stub.v:6]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'TX_RXex'. This will prevent further optimization [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/sources_1/new/top.v:98]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/sources_1/new/top.v:121]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'FMSC'. This will prevent further optimization [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/sources_1/new/top.v:72]
-INFO: [Synth 8-6155] done synthesizing module 'top' (10#1) [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'top' (9#1) [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/sources_1/new/top.v:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 2302.598 ; gain = 108.836 ; free physical = 759 ; free virtual = 7318
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 2284.004 ; gain = 70.992 ; free physical = 844 ; free virtual = 4269
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 2306.562 ; gain = 112.801 ; free physical = 757 ; free virtual = 7316
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 2289.938 ; gain = 76.926 ; free physical = 843 ; free virtual = 4273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 2306.562 ; gain = 112.801 ; free physical = 757 ; free virtual = 7316
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 2289.938 ; gain = 76.926 ; free physical = 843 ; free virtual = 4273
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2317.469 ; gain = 0.000 ; free physical = 747 ; free virtual = 7305
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2296.875 ; gain = 0.000 ; free physical = 835 ; free virtual = 4271
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -92,8 +87,6 @@ WARNING: [Vivado 12-584] No ports matched ''. [/home/daphnelme/Desktop/FMSC/loop
 WARNING: [Vivado 12-584] No ports matched ''. [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/sources_1/ip/TX_RX/TX_RX/TX_RX_in_context.xdc:14]
 WARNING: [Vivado 12-584] No ports matched ''. [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/sources_1/ip/TX_RX/TX_RX/TX_RX_in_context.xdc:16]
 Finished Parsing XDC File [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/sources_1/ip/TX_RX/TX_RX/TX_RX_in_context.xdc] for cell 'TX_RXex/TX_RX_support_i'
-Parsing XDC File [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'ila_0'
-Finished Parsing XDC File [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'ila_0'
 Parsing XDC File [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/constrs_1/new/const.xdc]
 WARNING: [Vivado 12-2489] -period contains time 4.166700 which will be rounded to 4.167 to ensure it is an integer multiple of 1 picosecond [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/constrs_1/new/const.xdc:72]
 Finished Parsing XDC File [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/constrs_1/new/const.xdc]
@@ -103,29 +96,27 @@ Parsing XDC File [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.runs
 Finished Parsing XDC File [/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2444.301 ; gain = 0.000 ; free physical = 662 ; free virtual = 7221
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2423.707 ; gain = 0.000 ; free physical = 699 ; free virtual = 4193
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2444.301 ; gain = 0.000 ; free physical = 662 ; free virtual = 7221
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'ila_0' at clock pin 'clk' is different from the actual clock period '8.334', this can lead to different synthesis results.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.17 . Memory (MB): peak = 2423.707 ; gain = 0.000 ; free physical = 699 ; free virtual = 4193
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:32 . Memory (MB): peak = 2447.266 ; gain = 253.504 ; free physical = 731 ; free virtual = 7291
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:46 . Memory (MB): peak = 2423.707 ; gain = 210.695 ; free physical = 750 ; free virtual = 4267
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a200tfbg676-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 2447.266 ; gain = 253.504 ; free physical = 731 ; free virtual = 7291
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:46 . Memory (MB): peak = 2423.707 ; gain = 210.695 ; free physical = 750 ; free virtual = 4267
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for TX_RXex/TX_RX_support_i. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for ila_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 2447.266 ; gain = 253.504 ; free physical = 731 ; free virtual = 7291
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:46 . Memory (MB): peak = 2423.707 ; gain = 210.695 ; free physical = 749 ; free virtual = 4266
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'convert_state_reg' in module 'PRBS_DATA'
 INFO: [Synth 8-802] inferred FSM for state register 'fsm_state_reg' in module 'FMSC'
@@ -162,7 +153,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'fsm_state_reg' using encod
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'control_state_reg' using encoding 'sequential' in module 'FMSC'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 2447.270 ; gain = 253.508 ; free physical = 725 ; free virtual = 7286
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:48 . Memory (MB): peak = 2423.707 ; gain = 210.695 ; free physical = 737 ; free virtual = 4259
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -223,7 +214,7 @@ RAM Pipeline Warning: Read Address Register Found For RAM FIFO34/storage_reg. We
 RAM Pipeline Warning: Read Address Register Found For RAM FIFO34/storage_reg. We will not be able to pipeline it. This may degrade performance. 
 RAM Pipeline Warning: Read Address Register Found For RAM FIFO34/storage_reg. We will not be able to pipeline it. This may degrade performance. 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:38 . Memory (MB): peak = 2447.270 ; gain = 253.508 ; free physical = 705 ; free virtual = 7273
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:56 . Memory (MB): peak = 2423.707 ; gain = 210.695 ; free physical = 686 ; free virtual = 4239
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -244,13 +235,13 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:50 . Memory (MB): peak = 2447.270 ; gain = 253.508 ; free physical = 586 ; free virtual = 7154
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:01:08 . Memory (MB): peak = 2423.707 ; gain = 210.695 ; free physical = 515 ; free virtual = 4123
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:52 . Memory (MB): peak = 2447.270 ; gain = 253.508 ; free physical = 573 ; free virtual = 7141
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:01:10 . Memory (MB): peak = 2426.699 ; gain = 213.688 ; free physical = 483 ; free virtual = 4111
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -304,7 +295,7 @@ INFO: [Synth 8-7052] The timing for the instance FIFO34/storage_reg_0_31 (implem
 INFO: [Synth 8-7052] The timing for the instance FIFO34/storage_reg_0_32 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance FIFO34/storage_reg_0_33 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:53 . Memory (MB): peak = 2447.270 ; gain = 253.508 ; free physical = 573 ; free virtual = 7141
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:01:10 . Memory (MB): peak = 2434.707 ; gain = 221.695 ; free physical = 481 ; free virtual = 4110
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -321,82 +312,82 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt0_gtprxn_in
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt0_gtprxp_in
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt0_txcharisk_in[3]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt0_txcharisk_in[2]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt0_txcharisk_in[1]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[31]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[30]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[29]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[28]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[27]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[26]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[25]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[24]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[23]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[22]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[21]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[20]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[19]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[18]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[17]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[16]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[15]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[14]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[13]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[12]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[11]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[10]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[9]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[8]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[7]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[6]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[5]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[4]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[3]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[2]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[1]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txdata_in[0]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module TX_RX_support_i has unconnected pin gt1_txcharisk_in[0]
-WARNING: [Synth 8-3295] tying undriven pin gt_txfsmresetdone_r_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin gt_txfsmresetdone_r2_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin gt0_rxfsmresetdone_r_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin gt0_rxfsmresetdone_r2_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin gt1_rxfsmresetdone_r_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin gt1_rxfsmresetdone_r2_inferred:in0 to constant 0
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt0_gtprxn_in
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt0_gtprxp_in
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt0_txcharisk_in[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt0_txcharisk_in[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt0_txcharisk_in[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[31]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[30]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[29]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[28]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[27]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[26]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[25]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[24]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[23]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[22]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[21]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[20]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[19]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[18]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[17]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[16]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[15]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[14]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[13]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[12]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[11]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[10]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[9]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[8]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[7]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[6]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[5]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[4]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txdata_in[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \TX_RXex/TX_RX_support_i  has unconnected pin gt1_txcharisk_in[0]
+WARNING: [Synth 8-3295] tying undriven pin TX_RXex/gt_txfsmresetdone_r_inferred:in0 to constant 0
+WARNING: [Synth 8-3295] tying undriven pin TX_RXex/gt_txfsmresetdone_r2_inferred:in0 to constant 0
+WARNING: [Synth 8-3295] tying undriven pin TX_RXex/gt0_rxfsmresetdone_r_inferred:in0 to constant 0
+WARNING: [Synth 8-3295] tying undriven pin TX_RXex/gt0_rxfsmresetdone_r2_inferred:in0 to constant 0
+WARNING: [Synth 8-3295] tying undriven pin TX_RXex/gt1_rxfsmresetdone_r_inferred:in0 to constant 0
+WARNING: [Synth 8-3295] tying undriven pin TX_RXex/gt1_rxfsmresetdone_r2_inferred:in0 to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:57 . Memory (MB): peak = 2447.270 ; gain = 253.508 ; free physical = 572 ; free virtual = 7141
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:01:14 . Memory (MB): peak = 2434.711 ; gain = 221.699 ; free physical = 470 ; free virtual = 4110
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:57 . Memory (MB): peak = 2447.270 ; gain = 253.508 ; free physical = 572 ; free virtual = 7141
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:01:14 . Memory (MB): peak = 2434.711 ; gain = 221.699 ; free physical = 470 ; free virtual = 4111
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:57 . Memory (MB): peak = 2447.270 ; gain = 253.508 ; free physical = 572 ; free virtual = 7141
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:01:15 . Memory (MB): peak = 2434.711 ; gain = 221.699 ; free physical = 469 ; free virtual = 4111
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:57 . Memory (MB): peak = 2447.270 ; gain = 253.508 ; free physical = 572 ; free virtual = 7141
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:01:15 . Memory (MB): peak = 2434.711 ; gain = 221.699 ; free physical = 469 ; free virtual = 4110
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:57 . Memory (MB): peak = 2447.270 ; gain = 253.508 ; free physical = 572 ; free virtual = 7141
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:01:15 . Memory (MB): peak = 2434.711 ; gain = 221.699 ; free physical = 468 ; free virtual = 4110
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:57 . Memory (MB): peak = 2447.270 ; gain = 253.508 ; free physical = 572 ; free virtual = 7141
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:01:15 . Memory (MB): peak = 2434.711 ; gain = 221.699 ; free physical = 468 ; free virtual = 4110
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -407,7 +398,6 @@ Report BlackBoxes:
 |      |BlackBox name |Instances |
 +------+--------------+----------+
 |1     |TX_RX         |         1|
-|2     |ila_0         |         1|
 +------+--------------+----------+
 
 Report Cell Usage: 
@@ -415,48 +405,46 @@ Report Cell Usage:
 |      |Cell     |Count |
 +------+---------+------+
 |1     |TX_RX    |     1|
-|2     |ila      |     1|
-|3     |BUFG     |     1|
-|4     |CARRY4   |    20|
-|5     |LUT1     |    13|
-|6     |LUT2     |    99|
-|7     |LUT3     |    77|
-|8     |LUT4     |    36|
-|9     |LUT5     |    71|
-|10    |LUT6     |    83|
-|11    |MUXF7    |     8|
-|12    |RAMB36E1 |    34|
-|13    |FDCE     |    10|
-|14    |FDRE     |   325|
-|15    |FDSE     |     1|
-|16    |IBUF     |     5|
-|17    |IBUFDS   |     1|
-|18    |OBUF     |     4|
+|2     |BUFG     |     1|
+|3     |CARRY4   |    20|
+|4     |LUT1     |    13|
+|5     |LUT2     |    63|
+|6     |LUT3     |    47|
+|7     |LUT4     |    52|
+|8     |LUT5     |    45|
+|9     |LUT6     |    96|
+|10    |RAMB36E1 |    34|
+|11    |FDCE     |    10|
+|12    |FDRE     |   310|
+|13    |FDSE     |    11|
+|14    |IBUF     |     4|
+|15    |IBUFDS   |     1|
+|16    |OBUF     |    10|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:57 . Memory (MB): peak = 2447.270 ; gain = 253.508 ; free physical = 572 ; free virtual = 7141
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:01:15 . Memory (MB): peak = 2434.711 ; gain = 221.699 ; free physical = 468 ; free virtual = 4110
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 38 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 2447.270 ; gain = 112.805 ; free physical = 626 ; free virtual = 7194
-Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 2447.270 ; gain = 253.508 ; free physical = 626 ; free virtual = 7194
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:56 . Memory (MB): peak = 2434.711 ; gain = 87.930 ; free physical = 520 ; free virtual = 4163
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:01:15 . Memory (MB): peak = 2434.715 ; gain = 221.699 ; free physical = 520 ; free virtual = 4163
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2447.270 ; gain = 0.000 ; free physical = 698 ; free virtual = 7266
-INFO: [Netlist 29-17] Analyzing 63 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2434.715 ; gain = 0.000 ; free physical = 513 ; free virtual = 4156
+INFO: [Netlist 29-17] Analyzing 55 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2447.270 ; gain = 0.000 ; free physical = 640 ; free virtual = 7208
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2434.715 ; gain = 0.000 ; free physical = 445 ; free virtual = 4099
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-82 Infos, 17 Warnings, 38 Critical Warnings and 0 Errors encountered.
+77 Infos, 15 Warnings, 38 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:01:13 . Memory (MB): peak = 2447.270 ; gain = 253.613 ; free physical = 782 ; free virtual = 7350
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:01:32 . Memory (MB): peak = 2434.715 ; gain = 221.809 ; free physical = 585 ; free virtual = 4241
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Jan 17 15:46:51 2022...
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 20 16:52:09 2022...

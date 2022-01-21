@@ -114,6 +114,9 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 set_msg_config  -id {Common 17-55}  -new_severity {WARNING} 
 
 OPTRACE "Implementation" START { ROLLUP_1 }
@@ -135,12 +138,10 @@ OPTRACE "set parameters" START { }
   set_property parent.project_path /home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.xpr [current_project]
   set_property ip_output_repo /home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet /home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.runs/synth_1/top.dcp
   read_ip -quiet /home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/sources_1/ip/TX_RX/TX_RX.xci
-  read_ip -quiet /home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/sources_1/ip/ila_0/ila_0.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc /home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/constrs_1/new/const.xdc
 OPTRACE "read constraints: implementation" END { }
@@ -307,7 +308,6 @@ set rc [catch {
   create_msg_db write_bitstream.pb
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   catch { write_mem_info -force top.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }

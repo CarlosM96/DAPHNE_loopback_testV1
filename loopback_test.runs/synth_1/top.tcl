@@ -70,8 +70,12 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 1
 set_param tcl.collectionResultDisplayLimit 0
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 set_msg_config  -id {Common 17-55}  -new_severity {WARNING} 
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a200tfbg676-2
@@ -82,7 +86,6 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir /home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.cache/wt [current_project]
 set_property parent.project_path /home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo /home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.cache/ip [current_project]
@@ -100,12 +103,6 @@ read_vhdl -library xil_defaultlib {{/home/daphnelme/Desktop/Pruebas del LAb/Carl
 read_ip -quiet /home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/sources_1/ip/TX_RX/TX_RX.xci
 set_property used_in_implementation false [get_files -all /home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/sources_1/ip/TX_RX/TX_RX.xdc]
 set_property used_in_implementation false [get_files -all /home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/sources_1/ip/TX_RX/TX_RX_ooc.xdc]
-
-read_ip -quiet /home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/sources_1/ip/ila_0/ila_0.xci
-set_property used_in_synthesis false [get_files -all /home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all /home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all /home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all /home/daphnelme/Desktop/FMSC/loopback_testv/loopback_test.srcs/sources_1/ip/ila_0/ila_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
